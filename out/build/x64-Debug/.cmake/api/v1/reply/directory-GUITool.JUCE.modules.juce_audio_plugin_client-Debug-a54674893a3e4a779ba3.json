@@ -1,0 +1,45 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"GUITool/JUCE/modules/juce_audio_plugin_client/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 29,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin/JUCE-7.0.2",
+			"paths" : 
+			[
+				"GUITool/JUCE/modules/juce_audio_plugin_client/juce_lv2_helper.exe"
+			],
+			"targetId" : "juce_lv2_helper::@88d3ce881b83d6d08202",
+			"targetIndex" : 3,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "GUITool/JUCE/modules/juce_audio_plugin_client",
+		"source" : "GUITool/JUCE/modules/juce_audio_plugin_client"
+	}
+}
