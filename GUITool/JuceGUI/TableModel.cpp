@@ -2,26 +2,27 @@
 
 TableModel::TableModel()
 {
-	m_Vectors.push_back({ "vector1",3,2,1 });
-	m_Vectors.push_back({ "vector2",7,6,3 });
+	//m_Vectors.push_back({ "vector1",3,2,1 });
+	//m_Vectors.push_back({ "vector2",7,6,3 });
 }
 
 int TableModel::getNumRows()
 {
-	return m_Vectors.size();
+	return static_cast<int>(m_Vectors.size());
 }
 
 void TableModel::paintRowBackground(Graphics& g, int rowNumber, int width, int height, bool rowIsSelected)
 {
 	if (rowIsSelected)
 	{
-		g.setColour(Colour{210,210,210});
-		g.fillRoundedRectangle(0, 0, width, height, 3);
-		g.drawRoundedRectangle(0, 0, width, height, 3, 2);
-	}else
+		g.setColour(Colour{ 210,210,210 });
+		g.fillRoundedRectangle(0.f, 0.f, static_cast<float>(width), static_cast<float>(height), 3.f);
+		g.drawRoundedRectangle(0.f, 0.f, static_cast<float>(width), static_cast<float>(height), 3.f, 2.f);
+	}
+	else
 	{
 		g.setColour(Colour{ 255,128,64 });
-		g.drawRoundedRectangle(0, 0, width, height, 3, 2);
+		g.drawRoundedRectangle(0, 0, static_cast<float>(width), static_cast<float>(height), 3, 2);
 	}
 }
 
@@ -41,7 +42,7 @@ void TableModel::paintCell(Graphics& g, int rowNumber, int columnId, int width, 
 		switch (columnId)
 		{
 
-		case 1: g.drawText(vector.name, 40, 0, width-10, height, Justification::centredLeft);
+		case 1: g.drawText(vector.name, 40, 0, width - 10, height, Justification::centredLeft);
 			break;
 		case 2: g.drawText(String{ vector.x }, 0, 0, width, height, Justification::centredLeft);
 			break;
@@ -51,4 +52,9 @@ void TableModel::paintCell(Graphics& g, int rowNumber, int columnId, int width, 
 			break;
 		}
 	}
+}
+
+void TableModel::AddVector(NamedVector3 vector)
+{
+	m_Vectors.push_back(vector);
 }

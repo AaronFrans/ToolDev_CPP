@@ -7,7 +7,7 @@ set(SOURCES
 
 # Add an executable target for the project
 juce_add_gui_app(MyJUCEApp
-    PRODUCT_NAME "My Amzing Dog walking App"
+    PRODUCT_NAME "Ui Tool"
     VERSION ${PROJECT_VERSION}
     COMPANY_NAME "KoenSoft"
     DOCUMENT_EXTENSIONS "myext"

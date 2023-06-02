@@ -1,2 +1,0 @@
-#pragma code_page(65001)
-1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "D:/TD/Project-CPP/out/build/x64-Debug/GUITool/JUCE/tools/modules/juce_audio_plugin_client/CMakeFiles/juce_lv2_helper.dir/embed.manifest"

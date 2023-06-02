@@ -1,4 +1,10 @@
 #include <string>
+#include <vector>
+
+
+
+namespace FileReader 
+{
 
 struct Cube
 {
@@ -29,3 +35,7 @@ void WriteMTLFile(FILE* pOBJFile, const std::wstring& outputPath);
 Cube::CubeType LayerToEnum(const std::string& layer);
 
 int ConvertJSON(const std::wstring& input, const std::wstring& output);
+
+std::vector<std::vector<float>> GetJsonVertices(const std::wstring& input);
+
+}
