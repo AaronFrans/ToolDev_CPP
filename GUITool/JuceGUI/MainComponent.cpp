@@ -30,7 +30,8 @@ MainComponent::MainComponent()
 			{
 				File jsonFile(chooser.getResult());
 
-				jassert(jsonFile.existsAsFile());
+				if (!jsonFile.existsAsFile())
+					return;
 
 				m_ChosenFilePath = jsonFile.getFullPathName();
 
@@ -75,7 +76,8 @@ MainComponent::MainComponent()
 			{
 				File DirectoryPath(chooser.getResult());
 
-				jassert(DirectoryPath.exists());
+				if (!DirectoryPath.exists())
+					return;
 
 				auto output = DirectoryPath.getFullPathName();
 
